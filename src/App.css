@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+:root {
+  --main-font-color: rgb(204, 204, 204);
+  --main-font-hover-color: whitesmoke;
+  --main-page-max-width: 1200px;
+  --main-input-color: rgb(136, 84, 208);
+  --hover-input-color: rgb(164, 124, 219);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 10px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--main-font-color);
+  background-color: black;
+  text-rendering: optimizeLegibility;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../public/night.jpg);
+  height: 100vh;
+  min-width: var(--main-page-max-width);
+  background-size: cover;
+  background-position: center, bottom;
+  padding-top: 2rem;
+  position: relative;
+}
+
+section {
+  max-width: var(--main-page-max-width);
+  margin: 0 auto;
+}
+
+section h2 {
+  margin: 2rem 0 1rem;
+}
+
+.headernav {
+  max-width: var(--main-page-max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 5rem;
+}
+
+.navlinks {
+  display: flex;
+  list-style: none;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin-bottom: 2rem;
+}
+
+.navlinks a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.navlinks a:hover {
+  color: var(--main-font-hover-color);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+  border-bottom: solid 2px var(--main-font-hover-color);
+  transition: border-bottom 0.1s;
+}
+
+.tagline {
+  width: var(--main-page-max-width);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  color: var(--main-input-color);
+  text-decoration: none;
+  font-weight: 600;
+  border: solid 2px var(--main-input-color);
+  box-shadow: 2px 2px 6px rgba(106, 54, 158, 0.9);
+  margin: 0.5rem;
+}
+
+.btn.btnfull {
+  color: var(--main-font-color);
+  background-color: var(--main-input-color);
+}
+
+.btn:hover,
+.btn.btnfull:hover {
+  background-color: var(--hover-input-color);
+  border: solid 2px var(--hover-input-color);
+  color: var(--main-font-color);
+  box-shadow: 2px 2px 6px rgba(106, 54, 158, 0.9);
+  transition: background-color 0.25s, border 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+.container img {
+  height: 200px;
+  margin: 0.5rem 0;
+}
+
+.container  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  width: 270px;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.projectlist {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.projectcontainer {
+  width: 25%;
+  margin: 20px 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project__img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.5rem;
+
+}
+
+.footerlinks {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footerlinks a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.footerlinks a:hover {
+  color: var(--main-font-hover-color);
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form__input {
+  border: none;
+  background: none;
+  color: var(--main-input-color);
+  border-bottom: solid 1px var(--main-input-color);
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+textarea.form__input {
+  border: solid 1px var(--main-input-color);
+  height: 225px;
+  overflow: hidden;
+}
+
+.form__submit {
+  background: none;
+  margin: 12px 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../public/for_message.jpg);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 0 100px 100px black inset;
 }

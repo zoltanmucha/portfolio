@@ -1,43 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./normalize.css" />
+  <link rel="stylesheet" href="./App.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" />
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+  <div id="root">
+    <header id="home">
+      <nav class="headernav">
+        <div class="logo">Zoltan Mucha</div>
+        <ul class="navlinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#xp">Experience</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="tagline">
+        <h1>Portfolio site</h1>
+        <a href="#" class="btn btnfull">Curiculum Vitae</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </header>
+    <section class="experience" id="xp">
+      <h2>Experience</h2>
+      <div class="container">
+        <div>
+          <img src="./html logo.png" alt="html logo" />
+          <h3>HTML5</h3>
+          <p>
+            Semantic markup, creation of professional websites, accessibility,
+            SEO friendly structure.
+          </p>
+        </div>
+        <div>
+          <img src="./css logo.png" alt="css logo" />
+          <h3>CSS</h3>
+          <p>
+            Professional display, modern, responsive style, maintainable
+            architecture, Flexbox, Grid.
+        </div>
+        <div>
+          <img src="./js logo.png" alt="javascript logo" />
+          <h3>JavaScript</h3>
+          <p>Modern 2024 JavaScript, clean code.</p>
+        </div>
+        <div>
+          <img src="./python logo.png" alt="pyton logo" />
+          <h3>Pyton</h3>
+          <p>Modern Pyton, clean code.</p>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="portfolio">
+      <h2>Projects</h2>
+      <div class="projectlist">
+        <div class="projectcontainer">
+          <h3>Project 1</h3>
+          <a href="#"><img src="./project.jpg" alt="project 1" class="project__img" /></a>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        </div>
+        <div class="projectcontainer">
+          <h3>Project 2</h3>
+          <a href="#"><img src="./project.jpg" alt="project 2" class="project__img" /></a>
+        </div>
+        <div class="projectcontainer">
+          <h3>Project 3</h3>
+          <a href="#"><img src="./project.jpg" alt="project 3" class="project__img" /></a>
+        </div>
+        <div class="projectcontainer">
+          <h3>Project 4</h3>
+          <a href="#"><img src="./project.jpg" alt="project 4" class="project__img" /></a>
+        </div>
+        <div class="projectcontainer">
+          <h3>Project 5</h3>
+          <a href="#"><img src="./project.jpg" alt="project 5" class="project__img" /></a>
+        </div>
+        <div class="projectcontainer">
+          <h3>Project 6</h3>
+          <a href="#"><img src="./project.jpg" alt="project 6" class="project__img" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mnqeqlla" method="post">
+        <input type="text" class="form__input" name="name" placeholder="Name">
+        <input type="email" class="form__input" name="email" placeholder="E-mail">
+        <textarea class="form__input" name="message" placeholder="message">
+      </textarea>
+        <button type="submit" class="btn form__submit">Send</button>
+      </form>
+    </section>
+    <footer>
+      <ul class="footerlinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#xp">Experience</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      Copyright &copy; 2024 zoltaNm
+    </footer>
+  </div>
+</body>
+
 </html>
